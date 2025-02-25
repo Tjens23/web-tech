@@ -37,7 +37,9 @@
     <div class="w-2/3 pr-4">
         <div class="bg-white rounded-md shadow-md mb-4 p-4">
             <div class="flex items-center mb-4">
-                <img src="{{ $user->profile_picture ? asset('storage/' . $user->profile_picture) : 'default-profile.png' }}" alt="Profile Picture" class="w-16 h-16 rounded-full mr-4">
+                <img src="{{ $user->profile_picture ? asset('storage/' . $user->profile_picture) : asset('images/default-profile.png') }}"
+                     alt="Profile Picture"
+                     class="w-16 h-16 rounded-full mr-4">
                 <div>
                     <h2 class="text-2xl font-semibold">{{ $user->username }}</h2>
                     <p class="text-sm text-gray-500">Joined {{ $user->created_at->diffForHumans() }}</p>

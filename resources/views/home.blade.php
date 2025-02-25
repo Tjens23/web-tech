@@ -7,7 +7,11 @@
     <title>SocialConnect</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/notification.js') }}" ></script>
+    <script src="{{ asset('js/voting.js') }}" ></script>
+    <script src="{{ asset('js/comments.js') }}" ></script>
+    <script src="{{ asset('js/searchUser.js') }}" ></script>
+    <script src="{{ asset('js/bookmark.js') }}" ></script>
 </head>
 <body class="bg-gray-200">
 @if (session('success'))

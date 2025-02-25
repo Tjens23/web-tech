@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Notifications;
+use App\Models\User;
 use App\Models\UserNotification;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,21 +36,14 @@ class NotificationController extends Controller
     }
 
 
-    public function createFollowNotification($followedUser, $follower)
+    public function createFollowNotification(User $user, User $follower)
     {
-        $notification = Notifications::create([
-            'message' => $follower->username . ' followed you',
+        $user->notifications()->create([
+            'message' => "{$follower->username} followed you",
+            'notifiable_type' => User::class,
+            'notifiable_id' => $user->id, // ✅ Ensure notifiable_id is set correctly
+            'notification_by' => $follower->id,
             'sent_at' => now(),
-            'notifiable_type' => get_class($followedUser),
-            'notification_by' => $follower->id  // Changed to follower's ID
         ]);
-
-        UserNotification::create([
-            'user_id' => $followedUser->id,
-            'notification_id' => $notification->id,
-            'read_status' => 'unread'
-        ]);
-
-        return $notification;
     }
 }

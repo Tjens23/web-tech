@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redditlike</title>
+    <title>SocialConnect</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <script src="{{ asset('js/confirmPassword.js') }}" defer></script>
@@ -35,7 +35,7 @@
 
 <footer class="bg-white mt-8 py-4 border-t border-gray-300">
     <div class="container mx-auto text-center text-sm text-gray-500">
-        <p>&copy; 2024 Redditlike. All rights reserved.</p>
+        <p>&copy; 2025 SocialConnect All rights reserved.</p>
     </div>
 </footer>
 </body>
